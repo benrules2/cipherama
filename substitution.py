@@ -22,6 +22,7 @@ class SubstitutionCipher:
         self.cipher_alphabet.extend(tmp_alphabet)
 
     def encrypt_message(self, message):
+        message = message.lower()
         encrypted = ""
         for letter in message:
             index = self.original_alphabet.index(letter)
@@ -30,6 +31,7 @@ class SubstitutionCipher:
 
     def decrypt_message(self, message):
         decrypted = ""
+        message = message.lower()
         for letter in message:
             index = self.cipher_alphabet.index(letter)
             decrypted += self.original_alphabet[index]
