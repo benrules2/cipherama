@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     cipher = None
     if args.cipher == "shift":
-        cipher = shift.ShiftCipher(rot=args.N)
+        cipher = shift.ShiftCipher(N=args.N)
     elif args.cipher == "substitution":
         cipher = substitution.SubstitutionCipher(key=args.key)
     else:
